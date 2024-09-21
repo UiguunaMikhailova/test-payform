@@ -3,9 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    INIT
+    <header></header>
+    <main class="main">
+      <section class="checkout">
+        <h3 class="checkout__title">Checkout</h3>
+        <div class="checkout-items">
+          <h4 class="checkout-items__title">Products</h4>
+          <ul class="checkout-items-list">
+            <li class="checkout-items-list__item">
+              <a href="#" target="_blank"
+                >Apple - iPad with Retina display Wi-Fi - 32GB - White</a
+              >
+              <span>$499.00</span>
+            </li>
+            <div class="checkout-items-list__item">
+              <a href="#" target="_blank">16GB A Series Walkman Video MP3</a>
+              <span>$130.00</span>
+            </div>
+          </ul>
+        </div>
+        <div class="checkout-items">
+          <h4 class="checkout-items__title">Shipping method</h4>
+          <ul class="checkout-items-list">
+            <li class="checkout-items-list__item">
+              <span>FedEx</span>
+              <span>$499.00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="checkout-items">
+          <h4 class="checkout-items__title">Payment method</h4>
+          <div class="tabs">
+            <div class="tab-list">
+              <button
+                class="tab-list__button"
+                aria-selected="true"
+                id="creditCard"
+              >
+                Credit Card
+              </button>
+              <button
+                class="tab-list__button"
+                aria-selected="false"
+                id="giftCard"
+              >
+                Gift Card
+              </button>
+              <button
+                class="tab-list__button"
+                aria-selected="false"
+                id="payPal"
+              >
+                PayPal
+              </button>
+            </div>
+            <div class="tab-panel" aria-labelledby="creditCard">
+              <form action="#" id="form" class="form">
+                <div class="form__container">
+                  <div class="form__items">
+                    <div class="form__item">
+                      <label for="formCardNumber" class="form__label"
+                        >Card number<span class="label-star">*</span></label
+                      >
+                      <input
+                        id="formCardNumber"
+                        name="cardNumber"
+                        type="text"
+                        class="form__input form__input_large"
+                      />
+                    </div>
+                    <div class="form__item">
+                      <label for="formCVV" class="form__label"
+                        >CVV/CVC<span class="label-star">*</span></label
+                      >
+                      <input
+                        id="formCVV"
+                        name="CVV"
+                        type="text"
+                        class="form__input form__input_medium"
+                      />
+                    </div>
+                  </div>
+                  <div class="form__items">
+                    <div class="form__item">
+                      <fieldset class="form__label_combined">
+                        <legend class="form__label">
+                          Valid thru (mm/yy)<span class="label-star">*</span>
+                        </legend>
+                        <label for="formMonth"></label>
+                        <input
+                          id="formMonth"
+                          name="formMonth"
+                          type="text"
+                          class="form__input form__input_small"
+                        />
+                        <label for="formYear"></label>
+                        <input
+                          id="formYear"
+                          name="formYear"
+                          type="text"
+                          class="form__input form__input_small"
+                        />
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="form__items">
+                    <div class="form__item">
+                      <label for="formCardHoldersName" class="form__label"
+                        >Card holder's name<span class="label-star"
+                          >*</span
+                        ></label
+                      >
+                      <input
+                        id="formCardHoldersName"
+                        name="cardHoldersName"
+                        type="text"
+                        class="form__input form__input_large"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <input
+                    id="checkbox"
+                    name="checkbox"
+                    type="checkbox"
+                    class="checkbox__input"
+                  />
+                  <label for="checkbox" class="checkbox__label"
+                    >I accept the
+                    <a href="#" class="checkbox__link"
+                      >Terms and Conditions</a
+                    ></label
+                  >
+                </div>
+                <button type="submit" class="form__button">
+                  Place order ( $624.99 )
+                </button>
+              </form>
+            </div>
+            <div class="tab-panel" aria-labelledby="giftCard" hidden>
+              <p>Gift Card !!!!!!!!!!!</p>
+            </div>
+            <div class="tab-panel" aria-labelledby="payPal" hidden>
+              <p>PayPal !!!!!!!!!!!!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>

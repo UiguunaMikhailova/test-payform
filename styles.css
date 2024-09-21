@@ -1,0 +1,177 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.checkout {
+  margin: 100px auto 0;
+  width: 500px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__title {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+.checkout-items {
+  margin-bottom: 10px;
+}
+
+.checkout-items__title {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.checkout-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.checkout-items-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs {
+  display: grid;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.tab-panel {
+}
+
+.tab-list__button {
+  width: 160px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #b8b9c7;
+  color: #4c59d8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab-list__button[aria-selected='true'] {
+  background-color: #4c59d8;
+  color: white;
+  border: 1px solid #4c59d8;
+}
+
+.form__container {
+  margin: 20px;
+}
+
+.form__items {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.form__label_combined {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.label-star {
+  margin-left: 2px;
+  color: #ff0000;
+}
+
+.form__input {
+  height: 30px;
+  border: 1px solid #c5c5c5;
+}
+
+.form__input_large {
+  width: 240px;
+}
+
+.form__input_medium {
+  width: 100px;
+}
+
+.form__input_small {
+  width: 50px;
+}
+
+.checkbox {
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 40px 0 20px;
+}
+
+.checkbox__label {
+  font-size: 14px;
+}
+
+.checkbox__input {
+  appearance: none;
+  border: 1px solid #c5c5c5;
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.checkbox__input::after {
+  content: '\2714';
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  width: 0px;
+  height: 0px;
+  font-size: 11px;
+  transition: 200ms;
+  overflow: hidden;
+}
+
+.checkbox__input:checked::after {
+  transition: 200ms;
+  position: relative;
+}
+
+.checkbox__link {
+  color: #3e63a8;
+  text-decoration: underline dashed;
+}
+
+.form__button {
+  width: 100%;
+  height: 50px;
+  color: #ffffff;
+  background-color: #ff5521;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #ff6030;
+}
