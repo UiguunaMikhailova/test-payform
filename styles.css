@@ -49,9 +49,6 @@
   margin: 10px 0;
 }
 
-.tab-panel {
-}
-
 .tab-list__button {
   width: 160px;
   height: 35px;
@@ -69,19 +66,20 @@
 }
 
 .form__container {
-  margin: 20px;
+  margin: 15px;
 }
 
 .form__items {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .form__item {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form__label {
@@ -92,13 +90,21 @@
 
 .form__label_combined {
   border: 0;
-  margin: 0;
+  margin: 0 0 12px;
   padding: 0;
+  display: flex;
+  gap: 10px;
+  position: relative;
 }
 
 .label-star {
   margin-left: 2px;
   color: #ff0000;
+}
+
+.form__date {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__input {
@@ -116,6 +122,37 @@
 
 .form__input_small {
   width: 50px;
+  margin-left: -10px;
+}
+
+.input-divider {
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  top: 7px;
+  left: 0px;
+}
+
+.cvv__question-mark {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  width: 20px;
+}
+
+.cvv__tooltip {
+  visibility: hidden;
+  background-color: #b8b9c7;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffffff;
+  position: absolute;
+  bottom: -70px;
+  text-align: center;
+}
+
+.cvv__question-mark:hover ~ .cvv__tooltip {
+  visibility: visible;
 }
 
 .checkbox {
@@ -125,6 +162,7 @@
   align-items: center;
   padding: 15px;
   margin: 40px 0 20px;
+  position: relative;
 }
 
 .checkbox__label {
@@ -143,7 +181,7 @@
 .checkbox__input::after {
   content: '\2714';
   position: absolute;
-  top: -3px;
+  top: -2px;
   left: 2px;
   width: 0px;
   height: 0px;
@@ -160,6 +198,7 @@
 .checkbox__link {
   color: #3e63a8;
   text-decoration: underline dashed;
+  cursor: pointer;
 }
 
 .form__button {
@@ -174,4 +213,60 @@
 
 .form__button:hover {
   background-color: #ff6030;
+}
+
+.tooltip_set-position-checkbox {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+}
+
+.tooltip_set-position-date {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+}
+
+.tooltip,
+.expiry-tooltip {
+  visibility: hidden;
+  color: red;
+  font-size: 10px;
+}
+
+input.touched:invalid + .tooltip,
+input.touched:invalid ~ .expiry-tooltip,
+#checkbox.touched:invalid + label + .tooltip {
+  visibility: visible;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+}
+
+.popup__close-cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
 }
